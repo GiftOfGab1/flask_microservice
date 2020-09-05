@@ -9,7 +9,7 @@ def index():
 
 @app.route('/speech/<phrase>', methods=['GET'])
 def speak(phrase):
-  audio = requests.get('https://api.voicerss.org/?key=5965c450ab324b21b297ea2d6ce96846&hl=en-us&src='+phrase+'&f=44khz_16bit_stereo&ssml=false&b64=true')
+  audio = requests.get('https://api.voicerss.org/?key=5965c450ab324b21b297ea2d6ce96846&hl=en-us&src='+phrase+'&f=44khz_16bit_stereo&ssml=false&b64=false')
 
   return audio.text
 
