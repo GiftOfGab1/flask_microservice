@@ -14,7 +14,7 @@ def index():
 def speak(phrase, rate, voice):
   audio = requests.get('https://api.voicerss.org/?key=5965c450ab324b21b297ea2d6ce96846&hl=en-us&src='+phrase+'&r='+rate+'&v='+voice+'')
 
-  return audio.text
+  return audio.content
 
 if __name__ == "__main__":
     app.run(debug=True)
