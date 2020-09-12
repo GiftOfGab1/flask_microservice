@@ -4,6 +4,7 @@ from flask import jsonify
 from flask_cors import CORS
 
 app = Flask(__name__)
+app.config.from_envvar('APP_SETTINGS')
 CORS(app)
 
 @app.route('/')
@@ -17,4 +18,4 @@ def speak(phrase, rate, voice):
   return audio.content
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
